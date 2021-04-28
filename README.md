@@ -19,7 +19,7 @@ Created my first package for a player movement, watched a few tutorials to get a
 
 18/03/21
 
-Attempted to make a script that teleports an object to the mouse position, but the object didn't move at all in the scene.
+Attempted to make a script that teleports an object to the mouse position, but the object didn't move at all in the scene. Spent hours trying to figure out why but I gave up and took a break from this problem.
 
             using System.Collections;
             using System.Collections.Generic;
@@ -43,6 +43,25 @@ Attempted to make a script that teleports an object to the mouse position, but t
   
     }
   
+
+19/03/21
+
+     using UnityEngine;
+ 
+        public class Mouse : MonoBehaviour
+    {
+       public GameObject MousePosGameObject;
+ 
+       void Update()
+       {
+         Vector3 mousePos = Input.mousePosition;
+         mousePos.z = MousePosGameObject.transform.position.z - 
+         Camera.main.transform.position.z ;
+ 
+          MousePosGameObject.transform.position = Camera.main.ScreenToWorldPoint(mousePos);
+       }
+    }
+
 
 23/02/21
 
