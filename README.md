@@ -45,6 +45,8 @@ Attempted to make a script that teleports an object to the mouse position, but t
   
 
 19/03/21
+Decided to come back to this problem, I think the problem was that it was not obvious that the Z coordinate given to ScreenToWorldPoint is actually not a coordinate: it is the distance from the camera.
+
 
      using UnityEngine;
  
