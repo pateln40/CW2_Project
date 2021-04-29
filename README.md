@@ -1,7 +1,7 @@
 # CW2_Project Learning Journal 
 
 
-13/03/21
+13/02/21
 
 
 Created my first package for a player movement, watched a few tutorials to get a better undertstanding of what I needed to do for my script. For this pplayer movment script I decided to use a PlayerController component to make sure the player moves according to the environment (the colliders). The reason behind the Character Controller is that it provides basic collider responses without any physics. A simple script but I made small mistakes such as spelling 'characterController' wrong in this section of this script and forgetting to add the CharacterController component to the player object in the inspector.
@@ -17,7 +17,7 @@ Created my first package for a player movement, watched a few tutorials to get a
     }
 
 
-18/03/21
+18/02/21
 
 Attempted to make a script that teleports an object to the mouse position, but the object didn't move at all in the scene. Spent hours trying to figure out why but I gave up and took a break from this problem.
 
@@ -44,11 +44,11 @@ Attempted to make a script that teleports an object to the mouse position, but t
     }
   
 
-19/03/21
+19/02/21
 Decided to come back to this problem, I think the problem was that it was not obvious that the Z coordinate given to ScreenToWorldPoint is actually not a coordinate: it is the distance from the camera.
 
-
-     using UnityEngine;
+ 
+         using UnityEngine;
  
         public class Mouse : MonoBehaviour
     {
@@ -65,10 +65,28 @@ Decided to come back to this problem, I think the problem was that it was not ob
     }
 
 
-23/02/21
+12/03/21
+
+Tried to make my second package for my programming project, this time I'm planning to make a collect and destroy script. One of the issues I faced is that I forgot to tag the player in the inspector so it not collect or destroy the collectable object. Took me a while to realise but I got there in the end for it to work. 
+
+    if (plyr.gameObject.tag == "Player")
+            objects--;
+        gameObject.SetActive(false);
+    }
+
+
+
+
+23/03/21
 
 I attemped to make AI for my third package this involved using the NevMeshAgent and Baking function . This allows the AI to move around the map that is walkable, and the walls that isn't walkable. Since I've made AI it wasn't too bad to make but again I bumped into silly errors due to spelling or missing words. In this line of code I orginally wrote 'NavMesh' instead if 'NavMeshAgent'.
 
+   old
+    {
+        Mob = GetComponent<NavMesh>();
+    }
+
+ new
     {
         Mob = GetComponent<NavMeshAgent>();
     }
