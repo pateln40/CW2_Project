@@ -81,12 +81,6 @@ Tried to make my second package for my programming project, this time I'm planni
 
 I attemped to make AI for my third package this involved using the NevMeshAgent and Baking function . This allows the AI to move around the map that is walkable, and the walls that isn't walkable. Since I've made AI it wasn't too bad to make but again I bumped into silly errors due to spelling or missing words. In this line of code I orginally wrote 'NavMesh' instead if 'NavMeshAgent'.
 
-   old
-    {
-        Mob = GetComponent<NavMesh>();
-    }
-
- new
     {
         Mob = GetComponent<NavMeshAgent>();
     }
