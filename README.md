@@ -89,9 +89,20 @@ I attemped to make AI for my third package this involved using the NevMeshAgent 
 
 
 
+29/03/21
 
+Created a countdown timer for my game project, however whilst I was coding this I failed to get it working. An erroro would pop up stating that I was missing a directive or assembly reference. The reason why it didn't work is because I forgot to put 'using UnityEngine.UI;' for the script to actually run. 
+   
+    using UnityEngine;
+    using UnityEngine.UI;
 
+    public class CountdownTimer : MonoBehaviour
+    {
 
+    float currentTime = 0f;
+    float startingTime = 10f;
+
+    [SerializeField] Text countdownText;
 
 
 
